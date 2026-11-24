@@ -46,4 +46,317 @@
     .benefits>div:last-child{border:0}
     .benefits svg{width:20px;color:#9d793e;stroke-width:1.3}
     .section{padding:75px 6%;max-width:1600px;margin:auto}
-    .section-heading{display:flex;justify-content:space-between;align-items:flex-end
+    .section-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:25px;margin-bottom:30px}
+    .section-heading h2,.section h2{margin-top:12px}
+    .section h2 em,.ritual h2 em{color:#99763e}
+    .text-link{display:inline-flex;align-items:center;gap:12px;font-size:12px;border-bottom:1px solid #9d793e;padding-bottom:5px;width:fit-content}
+    .demo-note{font-size:11px;color:var(--muted);margin:12px 0 22px}
+    .product-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;margin-top:25px}
+    .product-card{display:block;min-width:0}
+    .product-art{position:relative;aspect-ratio:4/5;overflow:hidden;background:#eee7da}
+    .product-art>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .35s}
+    .product-card:hover .product-art>img{transform:scale(1.035)}
+    .refill-art{display:flex;flex-direction:column;align-items:center;justify-content:center;aspect-ratio:4/5;min-height:100%;padding:20px;position:relative;background:radial-gradient(ellipse at 48% 38%,#fffcf4,#e7decc);border:1px solid #dfd3bb;text-align:center;overflow:hidden}
+    .refill-art:before{content:'';position:absolute;inset:9%;border:1px solid #c5a975;pointer-events:none}
+    .refill-brand{font:10px/1.5 var(--serif);letter-spacing:.17em}
+    .refill-number{font:clamp(68px,8vw,126px)/1.2 var(--serif);color:#ab854b}
+    .refill-note{position:absolute;bottom:13%;font-size:8px;letter-spacing:.20em;color:#776345}
+    .product-meta{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:15px 0;border-bottom:1px solid var(--line)}
+    .product-meta h3{font-size:20px;margin:6px 0;letter-spacing:-.02em}
+    .product-meta p:not(.eyebrow){font-size:13px}
+    .product-meta svg{flex-shrink:0}
+    .ritual{background:#f1ece2;text-align:center;padding:65px 6%}
+    .ritual h2{margin:12px 0 28px}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:28px 0 38px}
+    .steps>div{border-top:1px solid #c9b58d;padding:22px 12px}
+    .steps span{color:#a17b3c;font:30px var(--serif)}
+    .steps h3{margin:9px 0}
+    .steps p{font-size:14px;color:var(--muted)}
+    .subscription{background:var(--deep);color:var(--ivory);display:grid;grid-template-columns:1.2fr .8fr;gap:45px;align-items:center;padding:70px 9%}
+    .subscription .eyebrow{color:var(--gold)}
+    .subscription h2{margin:12px 0 16px}
+    .subscription p:not(.eyebrow):not(.offer-price){color:#ddd9d1;max-width:500px}
+    .subscription-offer{border:1px solid #c8a65e88;padding:30px}
+    .offer-price{font:44px var(--serif);margin:16px 0 23px}
+    .offer-price small,.detail-price small{font:12px Arial,sans-serif}
+    .outline{background:transparent;color:#f5dca6}
+    .outline:hover:not(:disabled){color:var(--navy)}
+    .footer{background:#031329;color:#ddd5c7;padding:45px 6% 20px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:35px}
+    .footer img{max-width:220px}
+    .footer p{font-size:12px;margin-top:12px}
+    .footer h3{color:#d9b66c;font-size:20px;margin-bottom:12px}
+    .footer a{display:block;font-size:13px;margin:6px 0}
+    .footer small{grid-column:1/-1;border-top:1px solid #ffffff20;padding-top:16px;font-size:11px}
+    .inner-page{min-height:58vh}
+    .inner-page h1{font-size:clamp(44px,5.5vw,76px);margin:15px 0 22px}
+    .intro{font-size:18px;line-height:1.8;max-width:660px}
+    .editorial{max-width:1050px}
+    .editorial>p:not(.eyebrow){margin:20px 0}
+    .editorial .light{background:#f0e9db;margin:30px 0;max-width:570px}
+    .editorial .light .btn{margin-top:24px}
+    .detail{padding-top:35px}
+    .back{margin-bottom:25px}
+    .detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,7vw,105px);align-items:start}
+    .detail-photo{position:relative;background:#eee7da}
+    .detail-photo img{width:100%;height:auto}
+    .zoom{position:absolute;bottom:15px;right:15px;background:#061a36db;padding:8px 12px;color:#fff;font-size:11px}
+    .detail-copy{padding-top:25px}
+    .detail-copy h1{font-size:clamp(38px,4.5vw,67px);margin:15px 0 22px}
+    .detail-price{font:35px var(--serif);margin-bottom:22px}
+    .detail-copy .intro{font-size:16px;margin-bottom:20px}
+    .detail-copy .btn{margin:18px 0 0}
+    details{border-top:1px solid var(--line);padding:17px 0}
+    summary{cursor:pointer;font-weight:600;font-size:14px}
+    details p{font-size:14px;color:var(--muted);margin:12px 0}
+    details a{text-decoration:underline}
+    .editorial details:last-child{border-bottom:1px solid var(--line)}
+    @media(max-width:1000px){.header{gap:20px;padding-inline:4%}.brand{width:180px}.header nav{gap:20px}.hero{min-height:540px}.hero-photo{min-height:540px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.discover span{display:none}}
+    @media(max-width:760px){.header{flex-wrap:wrap;justify-content:center;gap:12px;padding:13px 4%}.brand{width:205px}.header nav{order:3;flex-basis:100%;justify-content:center;gap:clamp(10px,4vw,24px);font-size:11px}.discover{position:absolute;right:5%;top:56px}.hero{grid-template-columns:1fr}.hero-copy{padding:48px 7% 30px}.hero h1{font-size:clamp(47px,10vw,72px)}.hero-index{margin-top:30px}.hero-photo{min-height:0;aspect-ratio:1/1.04}.benefits{padding:16px 3%;gap:5px}.benefits>div{flex-direction:column;text-align:center;font-size:10px;gap:5px;padding:0 3px}.section{padding:50px 5%}.section-heading{align-items:flex-start;flex-direction:column;gap:16px}.product-grid{gap:13px}.product-meta h3{font-size:17px}.refill-art{padding:8px}.refill-brand{font-size:8px}.refill-number{font-size:72px}.refill-note{font-size:7px}.ritual{padding:45px 5%}.steps{gap:10px}.steps>div{padding:15px 4px}.steps h3{font-size:20px}.steps p{font-size:12px}.subscription{grid-template-columns:1fr;padding:45px 6%;gap:22px}.subscription-offer{padding:22px}.offer-price{font-size:36px}.footer{grid-template-columns:1fr 1fr;padding:30px 5% 15px;gap:20px}.footer>div:first-child{grid-column:1/-1}.detail-grid{grid-template-columns:1fr;gap:15px}.detail-copy{padding-top:10px}.detail-copy .btn{width:100%}.announcement{font-size:8px}.inner-page .steps{grid-template-columns:1fr}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+    .cart-count{font-size:11px;border-radius:50%;background:var(--gold);color:var(--navy);min-width:22px;height:22px;display:grid;place-items:center}
+    .pack-label{position:absolute;bottom:12px;left:12px;background:var(--ivory);padding:5px 12px;font-size:12px}
+    .gallery-main{aspect-ratio:4/5;overflow:hidden}
+    .gallery-main img{object-fit:cover}
+    .gallery-thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}
+    .gallery-thumbs button{border:1px solid var(--line);background:transparent;padding:4px;font-size:10px;cursor:pointer}
+    .gallery-thumbs button[aria-pressed=true]{border:2px solid #9d793e}
+    .gallery-thumbs img{width:100%;aspect-ratio:1;object-fit:cover}
+    .campaign{display:grid;grid-template-columns:1fr .85fr 1fr;align-items:center;gap:25px}
+    .campaign img{width:100%;height:auto}
+    .campaign-copy{text-align:center}
+    .campaign-copy p{margin:20px 0}
+    .campaign-copy h2{font-size:clamp(32px,4vw,56px)}
+    .cart-grid{display:grid;grid-template-columns:1.55fr 1fr;gap:45px;align-items:start}
+    .cart-labels{display:flex;justify-content:space-between;font-size:11px;letter-spacing:.15em;border-bottom:1px solid var(--line);padding:12px 0}
+    .cart-line{display:grid;grid-template-columns:110px 1fr auto;gap:20px;align-items:center;border-bottom:1px solid var(--line);padding:20px 0}
+    .cart-line img{height:110px;width:110px;object-fit:cover}
+    .cart-line h3{font-size:23px}
+    .cart-line .demo-note{margin:5px 0}
+    .qty{display:inline-flex;align-items:center;border:1px solid var(--line);gap:12px}
+    .qty button,.line-price button{background:transparent;border:0;padding:8px;cursor:pointer}
+    .qty button:disabled{opacity:.4;cursor:default}
+    .line-price{display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+    .line-price b{font:23px var(--serif)}
+    .cart-subscription{display:flex;align-items:center;gap:13px;background:#f0e9db;padding:20px;margin:22px 0;cursor:pointer}
+    .cart-subscription h3{font-size:22px}
+    .cart-subscription p{font-size:13px}
+    .cart-subscription small,.payment-methods small{font-size:11px;color:var(--muted)}
+    .cart-subscription strong{margin-left:auto;white-space:nowrap}
+    .cart-subscription input,.consent input{accent-color:#9d793e;flex-shrink:0}
+    .cart-subscription svg{flex-shrink:0;color:#9d793e}
+    .cart-summary{padding:25px;background:#fffdfa;border:1px solid var(--line)}
+    .cart-summary h2{font-size:32px;margin:0 0 20px}
+    .summary-line{display:flex;justify-content:space-between;gap:10px;padding:9px 0;font-size:14px}
+    .summary-line.total{border-top:1px solid var(--line);margin-top:10px;padding:18px 0;font:22px var(--serif)}
+    .cart-summary .btn{width:100%;margin:15px 0}
+    .renewal{font-size:13px;background:#f0e9db;padding:12px}
+    .consent{display:flex;align-items:flex-start;gap:8px;font-size:12px;margin:12px 0}
+    .payment-methods{border-top:1px solid var(--line);padding:20px 0}
+    .payment-methods h3{display:flex;align-items:center;gap:8px;font-size:22px}
+    .payment-chips{display:flex;flex-wrap:wrap;gap:5px;margin:12px 0}
+    .payment-chips span{padding:4px 8px;border:1px solid var(--line);background:#fff;font-size:11px;font-weight:600}
+    .empty-cart{padding:35px 0}
+    .error-message{color:#a32828;font-size:13px}
+    .cart-summary .demo-note{margin:5px 0 15px}
+    @media(max-width:900px){.campaign{grid-template-columns:1fr 1fr}.campaign-copy{grid-column:1/-1;grid-row:1}.cart-grid{grid-template-columns:1fr;gap:20px}}
+    @media(max-width:550px){.cart-line{grid-template-columns:70px 1fr auto;gap:10px}.cart-line img{width:70px;height:90px}.cart-line h3{font-size:17px}.line-price b{font-size:16px}.cart-subscription{padding:12px;gap:8px;flex-wrap:wrap}.cart-subscription h3{font-size:18px}.cart-subscription svg{display:none}.cart-summary{padding:16px}}
+
+    button{color:inherit}
+    .header nav a,.text-link{cursor:pointer}
+    .preview-banner{text-align:center;padding:8px;background:#e8dcc6;color:#19283b;font-size:11px}
+    .gallery-main img{position:absolute;inset:0;width:100%;height:100%}
+    .gallery-thumbs img{display:block}
+    .cart-summary .btn{background:#d9b66c}
+    .detail-photo{min-height:0}
+    .product-art img{width:100%;height:100%}
+    .nav-link{cursor:pointer}
+    .campaign-copy .btn{margin-top:10px}
+    .footer a{cursor:pointer}
+    .hero-photo img{display:block}
+    .cart-subscription input{width:18px;height:18px}
+
+    /* Payment brand marks: same layout in the preview and production storefront. */
+    .payment-chips.payment-logos{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0;align-items:center}
+    .payment-chips.payment-logos span{position:relative;box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;width:62px;height:42px;padding:6px;border:1px solid var(--line);border-radius:5px;background:#fff;flex-shrink:0}
+    .payment-chips.payment-logos img{display:block;width:48px;height:28px;object-fit:contain}
+    .payment-chips.payment-logos sup{position:absolute;right:3px;top:2px;color:var(--muted);font-size:9px;line-height:1}
+
+    /* Liens juridiques et pages de conditions */
+    .footer .footer-legal{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px 28px;border-top:1px solid #ffffff20;padding-top:16px}
+    .footer .footer-legal a{font-size:12px;margin:0;color:#ddd5c7;text-decoration:underline;text-underline-offset:4px}
+    .footer .footer-legal a:hover,.footer .footer-legal a:focus-visible{color:#d9b66c}
+    .footer .footer-legal+small{border-top:0;padding-top:0}
+    .legal-page{max-width:1040px;margin:0 auto;line-height:1.75}
+    .legal-page h1{font-size:clamp(36px,5vw,62px);line-height:1.15;margin-bottom:24px}
+    .legal-page h2{font-size:25px;line-height:1.3;margin:32px 0 10px}
+    .legal-page p{margin-bottom:12px}
+    .legal-notice{padding:18px 22px;border:1px solid #d6be8a;background:#f5efe3;color:#392f20;font-size:14px}
+    .legal-page .text-link{margin-top:26px;display:inline-block}
+
+    .shipping-banner{display:flex;align-items:center;justify-content:center;gap:10px 24px;flex-wrap:wrap;background:#d4af70;color:#041836;padding:11px 16px;text-align:center;text-decoration:none;line-height:1.35}
+    .shipping-banner strong{font-size:12px;letter-spacing:.09em}
+    .shipping-banner span{font-size:11px;letter-spacing:0}
+    .shipping-cta{text-decoration:underline;text-underline-offset:3px}
+    .checkout-steps{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:18px 0 32px;font-size:12px;letter-spacing:.05em;color:#666}
+    .checkout-steps strong{color:#041836}
+    .shipping-options{border:0;padding:0;margin:22px 0;min-width:0}
+    .shipping-options legend{font-family:Georgia,serif;font-size:24px;margin-bottom:8px}
+    .shipping-option{display:flex;align-items:center;gap:12px;padding:15px;border:1px solid #d8d2c6;margin:8px 0;background:#fff;cursor:pointer}
+    .shipping-option:has(input:checked){border-color:#ad873d;background:#faf5e9}
+    .shipping-option input{accent-color:#041836;flex:none}
+    .shipping-option .ship-info{flex:1;display:grid;gap:4px}
+    .shipping-option small{color:#625c52;font-size:12px}
+    .shipping-option strong:last-child{white-space:nowrap}
+    .shipping-progress{padding:15px 0;margin:12px 0;border-bottom:1px solid #e6e0d4}
+    .shipping-progress p{font-size:13px;margin:0 0 9px;line-height:1.5}
+    .shipping-progress progress{display:block;width:100%;height:7px;accent-color:#b18a43}
+    .shipping-progress a{font-size:12px;text-decoration:underline;display:inline-block;margin-top:8px}
+    .shipping-edit{font-size:13px;text-decoration:underline;background:none;border:0;color:inherit;cursor:pointer;margin-top:10px}
+    .shipping-panel{margin-top:16px}
+    .shipping-panel .btn{margin-top:14px}
+    .shipping-note{font-size:12px;color:#625c52;line-height:1.5}
+    .shipping-summary{margin:12px 0;padding:10px 0;border-bottom:1px solid #e6e0d4}
+    .shipping-summary strong{display:block}
+    .shipping-summary small{font-size:12px;color:#625c52}
+    @media(max-width:600px){.shipping-banner{gap:4px 12px}.shipping-banner strong{width:100%}.shipping-option{padding:11px;gap:8px}.checkout-steps{gap:8px}}
+
+    .shipping-banner span{color:#041836}
+    .shipping-banner:hover{color:#041836}
+    .shipping-banner:focus-visible{outline:2px solid #041836;outline-offset:-3px}
+    #collection{scroll-margin-top:110px}
+
+    /* Maison Scently — une histoire humaine */
+    .story-teaser{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);background:#eee7db;align-items:stretch;max-width:1600px;margin:0 auto}
+    .story-teaser>figure,.story-photo{margin:0;position:relative;overflow:hidden;min-height:420px}
+    .story-teaser>figure img,.story-photo img{width:100%;height:100%;object-fit:cover;object-position:center 57%;position:absolute;inset:0}
+    .story-copy{padding:clamp(35px,6vw,92px);align-self:center}
+    .story-copy h2{margin:18px 0 23px}
+    .story-copy>p:not(.eyebrow){max-width:530px;margin:0 0 20px;color:#57534c;line-height:1.85}
+    .story-copy .text-link{margin-top:6px}
+    .story-caption{font-size:10px;color:#fff;background:#041836d9;position:absolute;bottom:12px;left:12px;padding:5px 9px}
+    .story-page{max-width:1440px;margin:0 auto}
+    .story-heading{text-align:center;max-width:850px;margin:0 auto 48px}
+    .story-heading h1{margin:18px 0 22px}
+    .story-heading .intro{max-width:670px;margin:auto;color:#57534c}
+    .story-layout{display:grid;grid-template-columns:1fr 1fr;gap:clamp(25px,5vw,75px);align-items:stretch}
+    .story-layout .story-copy{padding:25px 0}
+    .story-layout h2{font-size:clamp(30px,3.8vw,54px)}
+    .story-values{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:65px}
+    .story-values article{border-top:1px solid #b99b61;padding:22px 0}
+    .story-values h3{margin:10px 0;font-size:26px}
+    .story-values p{color:#57534c;line-height:1.8}
+    .story-end{text-align:center;background:#041836;color:#faf7f0;padding:50px 6%;margin-top:30px}
+    .story-end h2{margin:12px 0 18px;color:#e4c78d;font-size:clamp(30px,4vw,52px)}
+    .story-end p:not(.eyebrow){max-width:620px;margin:0 auto 24px}
+    .header nav{gap:clamp(12px,2.2vw,30px);flex-wrap:wrap}
+    .hero-copy .hero-story-link{color:#f2d79e;margin-top:16px}
+    .hero-copy .hero-index{margin-top:36px}
+    @media(max-width:760px){.story-teaser,.story-layout{grid-template-columns:1fr}.story-teaser>figure,.story-photo{min-height:0;aspect-ratio:4/3}.story-values{grid-template-columns:1fr;gap:10px;margin-top:30px}.story-heading{margin-bottom:25px}.story-copy{padding:34px 6%}.header nav{gap:8px 15px}.story-layout .story-copy{padding:5px 0}}
+
+    /* Les cinq fondateurs — portraits studio, sans attribution individuelle. */
+    .founders-panel{align-self:center;margin:0;padding:clamp(22px,3.5vw,44px) clamp(14px,2.5vw,32px);background:#f1eadf;border:1px solid #d9c9aa;text-align:center;min-width:0}
+    .founders-panel .eyebrow{color:#8c6b35;margin:0 0 10px}
+    .founders-panel h2{font-size:clamp(28px,3.3vw,43px);line-height:1.15;margin:0 0 25px}
+    .founders-portraits{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(10px,1.3vw,20px);margin:0 auto 26px;max-width:550px}
+    .founders-portrait{width:calc((100% - 42px)/3);max-width:155px;min-width:75px;aspect-ratio:4/5;border:1px solid #d3bd92;background:white;overflow:hidden;display:flex;align-items:center;justify-content:center;border-radius:0}
+    .founders-portrait img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+    .founders-names{border-top:1px solid #c6aa76;padding-top:18px;margin:0 auto;max-width:440px;color:#15243a;font:clamp(16px,1.5vw,20px)/1.8 var(--serif)}
+    .founders-role{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#78603b;margin:12px 0 0}
+    .founders-panel .founders-intro{font-size:14px;line-height:1.7;color:#57534c;margin:14px auto 0;max-width:390px}
+    @media(max-width:420px){.founders-portraits{gap:9px}.founders-portrait{width:calc((100% - 18px)/3)}}
+
+    /* Collection blanche — nouvelle direction artistique */
+    :root{--ivory:#fff;--line:#e5e2de;--ink:#172338}
+    body{background:#fff}
+    .header{background:#fff;color:#172338;border-bottom:1px solid #e5e2de}
+    .header nav a,.header .discover{color:#172338}
+    .hero{background:#fff;color:#172338;min-height:500px}
+    .hero-copy{background:#fff}
+    .hero h1 em{color:#8b6a36}
+    .hero-description,.hero-index{color:#5d5853}
+    .hero-copy .hero-story-link{color:#76572b}
+    .hero-photo{min-height:480px;background:#fff}
+    .hero-photo img{object-fit:cover;object-position:58% center}
+    .hero-photo>span{color:#172338;background:#ffffffc9;padding:6px 9px}
+    .benefits,.ritual,.story-teaser,.subscription{background:#fff;color:#172338}
+    .subscription p,.subscription small,.subscription .eyebrow,.subscription h2,.subscription .offer-price{color:#172338}
+    .subscription .outline{color:#172338;border-color:#b39a70}
+    .product-art,.detail-photo,.gallery-main,.gallery-thumbs button{background:#fff}
+    .product-art>img,.detail-photo img,.gallery-thumbs img{object-fit:contain}
+    .product-art{aspect-ratio:1/1}
+    .gift-occasions{text-align:center;padding-top:52px;padding-bottom:30px}
+    .occasion-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}
+    .occasion-grid a{display:flex;justify-content:space-between;align-items:center;border:1px solid #e5e2de;padding:16px;color:#172338}
+    .signature-views{text-align:center}
+    .signature-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:26px}
+    .signature-grid a{display:block}
+    .signature-grid img{width:100%;aspect-ratio:1;object-fit:cover;background:#fff}
+    .signature-grid span{display:block;font-size:12px;margin-top:8px;color:#655e55}
+    .story-teaser>figure img{object-fit:contain}
+    .campaign>div img{background:#fff}
+    .footer{background:#fff;color:#172338;border-top:1px solid #e5e2de}
+    .footer a,.footer p,.footer small,.footer .footer-legal a{color:#172338}
+    .footer .footer-legal{border-color:#e5e2de}
+    .footer small{border-color:#e5e2de}
+    .footer h3{color:#76572b}
+    .shipping-banner{background:#f5f0e7}
+    .cart-count{background:#d9b66c;color:#172338}
+    .preview-banner{background:#f5f0e7}
+    .pack-label{background:#fff}
+    .story-end{background:#fff;color:#172338}
+    .story-end h2{color:#76572b}
+    @media(max-width:760px){.hero-photo{min-height:0;aspect-ratio:4/3}.occasion-grid{grid-template-columns:repeat(2,1fr)}.signature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.signature-grid a:last-child{grid-column:1/-1;max-width:50%;margin:auto}.hero-copy{padding:45px 6%}.hero{min-height:0}}
+  </style>
+</head>
+<body>
+  <div class="preview-banner">APERÇU INTERACTIF · Aucun paiement réel</div>
+  <a class="announcement shipping-banner" href="#collection">
+    <strong>LIVRAISON OFFERTE DÈS 100 € D’ACHAT</strong>
+    <span>France métropolitaine · Colissimo standard</span>
+    <span class="shipping-cta">Découvrir la collection →</span>
+  </a>
+  <header class="header">
+    <a class="brand" href="#home"><img id="brand" alt="Maison Scently"></a>
+    <nav>
+      <a href="#bijoux">Le bijou</a>
+      <a href="#recharges">Les recharges</a>
+      <a href="#abonnement">L’abonnement</a>
+      <a href="#concept">Le rituel</a>
+      <a href="#qui-sommes-nous">Qui sommes-nous ?</a>
+    </nav>
+    <a class="discover" href="#panier">◈ Panier <b id="count" class="cart-count">0</b></a>
+  </header>
+  <main id="main"></main>
+  <footer class="footer">
+    <div>
+      <img id="footerLogo" alt="Maison Scently">
+      <p>L’élégance à fleur de parfum.</p>
+    </div>
+    <div>
+      <h3>La maison</h3>
+      <a href="#qui-sommes-nous">Qui sommes-nous ?</a>
+      <a href="#concept">Le rituel Scently</a>
+      <a href="#home">Accueil</a>
+    </div>
+    <div>
+      <h3>La collection</h3>
+      <a href="#bijoux">Le bijou signature</a>
+      <a href="#recharges">Les recharges</a>
+      <a href="#abonnement">L’abonnement</a>
+      <a href="#panier">Panier</a>
+    </div>
+    <nav class="footer-legal" aria-label="Informations juridiques">
+      <a href="#cgu">Conditions générales d’utilisation (CGU)</a>
+      <a href="#cgv">Conditions générales de vente (CGV)</a>
+    </nav>
+    <small>© Maison Scently — Démonstration. Visuels générés non contractuels.</small>
+  </footer>
+  <script>
+    const A = {
+      "collier-ecrin": "data:image/webp;base64,...",
+      "collier-porte": "data:image/webp;base64,..."
+      /* ... suite du script tronquée dans le fichier fourni ... */
+    };
+  </script>
+</body>
+</html>
